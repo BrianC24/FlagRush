@@ -1,0 +1,45 @@
+.gameList {
+    background: #303741; 
+    height: 100vh;
+}
+
+.form-group {
+    color: white;
+}
+
+.list {
+    color: white;
+    border: 1px solid white;
+}
+
+tr:hover {
+    color: black;
+}
+
+.right {
+    text-align: right;
+}
+
+.game-modes {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.mode {
+    margin-bottom: 20px;
+}
+
+.victory-text {
+    font-family: 'Play', sans-serif;
+    font-size: 150px;
+    color: white;
+    background-color: #000066;
+    margin: 0; 
+}
+
+canvas {
+  display: block;
+  position: relative;
+  pointer-events: none;
+}
+

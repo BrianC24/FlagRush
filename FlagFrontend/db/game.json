@@ -1,0 +1,19 @@
+[
+    {
+        "id": 1,
+        "name": "John's Game",
+        "status": "Open"
+    },
+    
+    {
+        "id": 2,
+        "name": "Rori's Game",
+        "status": "Full"
+    },
+
+    {
+        "id": 3,
+        "name": "YO's Game",
+        "status": "Full"
+    }
+]

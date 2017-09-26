@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FlagRush</title>
+
+    <!-- Google Font - Open Sans -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Almendra' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+
+    <!-- Bootstrap CDN 3.3.7 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/gameList.css">
+    <link rel="stylesheet" href="./css/liveGame.css">
+    
+
+    <!-- jQuery cdn 2.2.4 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <!-- Bootsrap JS cdn 3.3.7 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Angular CDN 1.5.7 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
+
+    <!-- Angular UI Router CDN 0.4.2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+
+   
+</head>
+
+<body ng-app="FlagApp">
+    <ul id="main">
+        <div class="col-md-10">
+            <li id="mainLi"><a ui-sref="home">Home</a></li>
+            <li id="mainLi"><a ui-sref="game">Games</a></li>
+        </div>
+
+        <div class="col-md-2">
+            <li><a ui-sref="game" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-play"></span> Play Now</a></li>
+        </div>
+    </ul>
+
+    <div ui-view></div>
+
+<!-- Module -->
+<script type="text/javascript" src="./app.js"></script>
+<!-- Services -->
+<script type="text/javascript" src="./services/homeService.js"></script>
+<script type="text/javascript" src="./services/gameService.js"></script>
+<script type="text/javascript" src="./services/liveService.js"></script>
+
+<!-- Controllers -->
+<script type="text/javascript" src="./controllers/homeController.js"></script>
+<script type="text/javascript" src="./controllers/gameController.js"></script>
+<script type="text/javascript" src="./controllers/gameListController.js"></script>
+<script type="text/javascript" src="./controllers/confettiController.js"></script>
+</body>
+
+</html>

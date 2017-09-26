@@ -1,0 +1,140 @@
+<div class="row main-container">
+    <div class="col-md-2 side">
+        <h3 class="side-heading">Pieces:</h3>
+
+        <div class="container piece" 
+            ng-class="{'selected-piece': selectedPiece.type === pieces.flag}"
+            ng-click="selectPiece(pieces.flag)">
+            <div class="piece-flag piece-image">
+            </div>
+            <div class="middle">
+                <div class="text">Flag: {{ flagCounter }} piece</div>
+            </div>
+        </div>
+
+        <div class="container piece"
+            ng-class="{'selected-piece': selectedPiece.type === pieces.king}"
+            ng-click="selectPiece(pieces.king)">
+            <div class="piece-king piece-image">
+            </div>
+            <div class="middle">
+                <div class="text">King(6 star): {{ kingCounter }} piece</div>
+            </div>
+        </div>
+
+        <div class="container piece"
+            ng-class="{'selected-piece': selectedPiece.type === pieces.queen}"
+            ng-click="selectPiece(pieces.queen)">
+            <div class="piece-queen piece-image">
+            </div>
+            <div class="middle">
+                <div class="text">Queen(5 star): {{ queenCounter }} piece</div>
+            </div>
+        </div>
+
+        <div class="container piece"
+            ng-class="{'selected-piece': selectedPiece.type === pieces.duke}"
+            ng-click="selectPiece(pieces.duke)">
+            <div class="piece-duke piece-image">
+            </div>
+            <div class="middle">
+                <div class="text">Duke(4 star): {{ dukeCounter }} pieces</div>
+            </div>
+        </div>
+
+        <div class="container piece"
+            ng-class="{'selected-piece' : selectedPiece.type === pieces.count}"
+            ng-click="selectPiece(pieces.count)">
+            <div class="piece-count piece-image">
+            </div>
+            <div class="middle">
+                <div class="text">Count(3 star): {{ countCounter }} pieces</div>
+            </div>
+        </div>
+
+        <div class="container piece"
+            ng-class="{'selected-piece' : selectedPiece.type === pieces.viscount}"
+            ng-click="selectPiece(pieces.viscount)">
+            <div class="piece-viscount piece-image">
+            </div>
+            <div class="middle">
+                <div class="text">Viscount(2 star): {{ viscountCounter }}pieces</div>
+            </div>
+        </div>
+
+
+        <div class="container piece"
+            ng-class="{'selected-piece' : selectedPiece.type === pieces.knight}"
+            ng-click="selectPiece(pieces.knight)">
+            <div class="piece-knight piece-image">
+            </div>
+            <div class="middle">
+                <div class="text">Knight(1 star): {{ knightCounter }} pieces</div>
+            </div>
+        </div>
+        <div class="container">
+            <button type="button" id="myBtn" class="btn btn-primary btn-lg instruction" ng-click="instructionsModal()">Instructions</button>
+        </div>
+    </div>
+
+    <div class="col-md-10 board-color">
+        <div class="board">
+            <div class="board-row" ng-repeat="rows in board">
+                <div class="row-name">{{$index}}</div>
+                <div class="box" 
+                    ng-click="boardClick($parent.$index, $index)"
+                    ng-repeat="piece in rows track by $index"
+                    ng-class="{
+                        'selected-board-piece' : currentPiece.row == $parent.$index && currentPiece.col == $index, 
+                        'piece-flag': piece.type === 'flag',
+                        'piece-king': piece.type === 'king',
+                        'piece-queen': piece.type === 'queen',
+                        'piece-duke': piece.type === 'duke',
+                        'piece-count': piece.type === 'count',
+                        'piece-viscount': piece.type === 'viscount',
+                        'piece-knight': piece.type === 'knight',
+                        'piece-enemy' : piece.type === 'enemy'm   
+                    }">
+                </div>
+            </div>
+            <div class="board-row">
+                <div class="letter-mark" ng-repeat="letter in letters">{{ letter }}</div>
+            </div>
+           
+        </div>
+        <div class="container">
+            <div class="col-md-8">
+                <button ng-click="playerReady()" ng-show="!ready" type="button" class="btn btn-primary btn-lg submit">Ready</button>
+            </div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-primary btn-lg submit" ng-click="reset()">Reset Board</button>
+                <button type="button" class="btn btn-primary btn-lg submit" ng-click="saveGameState(id)" ui-sref="game">Save Progress</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- modal  -->
+<div class="modal fade" id="instructions" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Instructions for placement</h4>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li>You can place your pieces on any of the blocks in the first three rows of your side.(bottom 3)</li>
+                    <li>Hover over any of the pieces to see how many pieces you get for each.</li>
+                    <li>Each piece can only move one square forward, backward, left, and right.</li>
+                    <li>To win your flag must reach the opposing side of the board.</li>
+                    <li>Go back to home page to read all the rules.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- modal end -->

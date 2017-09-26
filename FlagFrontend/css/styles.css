@@ -1,0 +1,145 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* body {
+    background-color: #ff4c4c;
+} */
+
+#main {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+#mainLi {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+li a:hover {
+    background-color: #7f0000;
+}
+
+/* home.html */
+.home {
+    height: 2000px;
+    background-image: url("../images/main.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.welcome {
+    margin-top: 80px;
+}
+
+.intro {
+    margin-bottom: 150px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Play', sans-serif;
+    margin-bottom: 30px;
+    color: white;
+}
+
+h2 {
+    font-family: 'Play', sans-serif;
+    color: white;
+}
+
+h3 {
+    font-family: 'Play', sans-serif;
+    color: white;
+}
+
+/* rules page */
+
+.rules {
+    padding: 10px;
+    margin: 10px;
+    font-family: 'Play', sans-serif;
+    color: white;
+}
+
+.rulesLi {
+    font-family: 'Play', sans-serif;
+    margin-left: 50px;
+    font-size: 20px;
+    color: white;
+    
+}
+
+.rulesH2 {
+    font-family: 'Play', sans-serif;
+    margin-left: 50px;
+    color: white;
+    text-align: center;
+}
+
+.rulesRa {
+    font-family: 'Play', sans-serif;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+.ulRules {
+    text-align: center;
+}
+
+
+body, html {
+    height: 100%;
+}
+
+.parallax {
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.para2 {
+    background-image: url('../images/board.jpg');
+    height: 20%; 
+}
+
+.para3 {
+    background-image: url('../images/lego.jpg');
+    height: 25%; 
+}
+
+.para4 {
+    /* The image used */
+    background-image: url('../images/wood.jpg');
+    height: 20%; 
+}
+
+.para5 {
+    /* The image used */
+    background-image: url('../images/main.jpg');
+    height: 18%; 
+}
+
+.btn-lg {
+    margin-top: 10px;
+    margin-left: 10px;
+}

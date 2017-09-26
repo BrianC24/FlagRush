@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.side {
+    height: 100%;
+}
+
+.main-container {
+    background-color: #1a1717;
+}
+
+.side-heading {
+    text-align: center;
+}
+
+
+/* PIECES CSS */
+.piece {
+    position: relative;
+    width: 40%;
+    margin-bottom: 50px;
+}
+
+.selected-piece {
+    border: 2px solid white;
+}
+
+.piece-image {
+    opacity: 1;
+    display: block;
+    width: 60px;
+    height: 60px;  
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.piece-flag {
+    background-image: url('../images/red.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.piece-king {
+    background-image: url('../images/king2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.piece-queen {
+    background-image: url('../images/queen2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.piece-duke {
+    background-image: url('../images/duke2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.piece-count {
+    background-image: url('../images/count2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.piece-viscount {
+    background-image: url('../images/viscount2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.piece-knight {
+    background-image: url('../images/knight2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.piece-enemy {
+    background-image: url('../images/enemy.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+.piece:hover .piece-image {
+    opacity: 0.8;
+}
+
+.piece:hover .middle {
+    opacity: .8;
+}
+
+/* BOARD CSS */
+.text {
+    background-color: #bdf6e9;
+    color: black;
+    font-size: 14px;
+    text-align: center;
+    padding: 15px 15px;
+    height: 80px;
+    width: 100px;
+}
+
+.board {
+    margin: 10px auto;
+    width: 70vw;
+    height: 700px;
+}
+
+.board-row {
+    width: 100%;
+    height: 13%;
+}
+
+.box {
+    width: 10.1%;
+    height: 100%;
+    border-top: 2px solid black;
+    border-right: 0;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    /* display: block; */
+    margin: 0;
+    float: left;
+    background-color: #FCFBE3;
+}
+
+.letter-mark {
+    width: 10.1%;
+    text-align: center;
+    float: left;
+    margin: 0;
+    color: white;
+}
+
+.board-row .box {
+    border-bottom: 0;
+}
+
+.board-row .box:last-child {
+    border-right: 2px solid black;
+}
+
+.board-row .bottom {
+    border-bottom: 2px solid black;
+}
+
+.submit {
+    margin: 20px 0;
+}
+
+.board-color {
+    /* background-color: #002e38; */
+    background-image: url('../images/war.jpg');
+    height: 100%;
+}
+
+.row-name {
+    float: left;
+    color: white;
+    width: 20px;
+    padding-top: 40px;
+}
+.letter {
+    color: white;
+}
+
+.selected-board-piece {
+    background-color: yellow;
+}
