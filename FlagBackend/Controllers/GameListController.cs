@@ -11,7 +11,6 @@ namespace FlagRush.Controllers
     public class GameListController : Controller
     {
         private readonly LessonContext _context;
-
         public GameListController(LessonContext context)
         {
             _context = context;

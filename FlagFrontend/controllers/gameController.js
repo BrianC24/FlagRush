@@ -110,7 +110,6 @@ app.controller("gameController",
                 }
                 $scope.board.push(newRow);
             }
-
         };
 
         $scope.mediumBoard = function () {
@@ -334,9 +333,6 @@ app.controller("gameController",
                 row: row,
                 col: col
             };
-
-            console.log($scope.currentPiece);
-            console.log($scope.currentPiece.piece);
         }
 
         // Moves the selected piece to the new location row and col that is clicked on the board

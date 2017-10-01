@@ -16,7 +16,6 @@
     text-align: center;
 }
 
-
 /* PIECES CSS */
 .piece {
     position: relative;
@@ -84,7 +83,6 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
-
 
 .middle {
     transition: .5s ease;

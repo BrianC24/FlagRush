@@ -5,6 +5,7 @@
 
   <div class="container">
     <h2 class="mode">Game Modes</h2>
+    
     <table class="table table-hover list">
       <thead>
         <tr>
@@ -13,6 +14,7 @@
           <th class="right">Join</th>
         </tr>
       </thead>
+
       <tbody ng-repeat="game in games">
         <tr>
           <td>{{ game.name }}</td>
@@ -20,6 +22,7 @@
           <td><button type="button" class="btn btn-primary pull-right" ui-sref="liveGame({id: game.id})">Play</button></td>
         </tr>
       </tbody>
+
     </table>
   </div>
 

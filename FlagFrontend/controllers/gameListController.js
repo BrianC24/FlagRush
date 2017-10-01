@@ -21,7 +21,6 @@ app.controller("gameListController", function ($scope, $http, $state, $statePara
     liveService.createGameState(id);
     var currentID = id;
   }
-
   //initialize
   init();
 }); 

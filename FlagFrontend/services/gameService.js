@@ -51,7 +51,6 @@ angular
       };
     }
 
-
     function createEnemy() {
       var rank = Math.floor(Math.random() * (6 - 1)) + 1;
       return {

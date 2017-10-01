@@ -7,13 +7,9 @@ namespace FlagRush
         public string Name { get; set; }
         public string Status { get; set; }
         public string GameState {get; set;}
-
         public GameRoomItem()
         {
-
-           
         }
     }
-
     
 }

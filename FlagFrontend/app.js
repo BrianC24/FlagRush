@@ -4,7 +4,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise("/");
 
-
     $stateProvider
         .state("home", {
             url: '/',
@@ -28,7 +27,4 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             controller: "confettiController"
         })
         
-            
-               
-
 })

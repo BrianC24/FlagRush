@@ -128,6 +128,4 @@ app.controller("confettiController", function ($scope, $http, $state, $statePara
 
   }).call(this);
 
-
-
 });
